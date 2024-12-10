@@ -1,0 +1,28 @@
+#currentPlay {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#thumbnail {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--corner);
+  overflow: hidden;
+  background-color: var(--secondary);
+}
+
+#thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+#trackData {
+  line-height: 1.1;
+}
+
+#title {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--text);
+}

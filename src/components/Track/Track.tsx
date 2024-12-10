@@ -2,6 +2,7 @@ import { TrackType } from "../../@types/TrackType";
 import { IoPlayCircle } from "react-icons/io5";
 import styles from "./style.module.css";
 import { useTrackContext } from "../../context/TrackContext";
+import { usePlayerContext } from "../../context/PlayerContext";
 
 type TrackProps = {
   track: TrackType;
@@ -9,9 +10,12 @@ type TrackProps = {
 
 function Track({ track }: TrackProps) {
   const { setTrack } = useTrackContext();
+  const { setIsPlaying } = usePlayerContext();
 
   const handlePlayClick = () => {
+    setIsPlaying(false);
     setTrack(track);
+    setIsPlaying(true);
   };
 
   return (

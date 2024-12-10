@@ -4,6 +4,7 @@ export type TrackType = {
   artist: string;
   categoryId: number;
   thumbnail: string;
+  audio: string;
 };
 
 export type CategoryType = {

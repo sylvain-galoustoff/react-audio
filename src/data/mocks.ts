@@ -7,6 +7,7 @@ export const tracks: TrackType[] = [
     artist: "Royalty Free Music",
     categoryId: 1,
     thumbnail: "warrior.jpeg",
+    audio: "warriors.mp3",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const tracks: TrackType[] = [
     artist: "Majed Salih",
     categoryId: 1,
     thumbnail: "six.jpeg",
+    audio: "six.mp3",
   },
   {
     id: 3,
@@ -21,6 +23,7 @@ export const tracks: TrackType[] = [
     artist: "Praz Khanal",
     categoryId: 1,
     thumbnail: "noise.jpeg",
+    audio: "noise.mp3",
   },
   {
     id: 4,
@@ -28,6 +31,7 @@ export const tracks: TrackType[] = [
     artist: "Tab",
     categoryId: 1,
     thumbnail: "shadowrun.jpeg",
+    audio: "shadowrun.mp3",
   },
 ];
 
