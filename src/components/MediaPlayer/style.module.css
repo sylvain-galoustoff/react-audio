@@ -1,0 +1,10 @@
+#mediaPlayer {
+  height: 60px;
+  padding: 0 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--card);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.50);
+
+}
