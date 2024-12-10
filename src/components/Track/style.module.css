@@ -3,8 +3,6 @@
   gap: 16px;
   align-items: center;
   width: 100%;
-  border-bottom: 1px solid var(--separator);
-  padding-bottom: 16px;
 }
 
 .thumbnail {
@@ -25,4 +23,5 @@
 .play {
   font-size: 2rem;
   color: var(--primary);
+  cursor: pointer;
 }

@@ -7,10 +7,28 @@
   overflow: hidden;
 }
 
+#header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#header h1 {
+  border-left: 1px solid var(--separator);
+  padding-left: 16px;
+  line-height: 1;
+}
+
+#backButton {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
 #main {
   flex: 1;
   display: flex;
-  gap: 64px;
+  gap: 128px;
   height: calc(100% - 50px);
 }
 
