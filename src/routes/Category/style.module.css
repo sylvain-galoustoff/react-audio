@@ -1,0 +1,22 @@
+#tracksPage {
+  display: flex;
+}
+
+#main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+#content {
+  display: flex;
+  gap: 64px;
+}
+
+#tracks {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

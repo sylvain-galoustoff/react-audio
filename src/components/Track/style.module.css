@@ -1,0 +1,28 @@
+.track {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid var(--separator);
+  padding-bottom: 16px;
+}
+
+.thumbnail {
+  display: flex;
+  align-items: center;
+}
+
+.thumbnail img {
+  border-radius: var(--corner);
+  width: 100%;
+  height: auto;
+}
+
+.data {
+  flex: 1;
+}
+
+.play {
+  font-size: 2rem;
+  color: var(--primary);
+}
