@@ -1,0 +1,9 @@
+#sidebar {
+  width: 310px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

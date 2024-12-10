@@ -1,22 +1,20 @@
 #tracksPage {
   display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px 64px;
+  height: calc(100% - 120px);
+  overflow: hidden;
 }
 
 #main {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  gap: 32px;
+  gap: 64px;
+  height: calc(100% - 50px);
 }
 
 #content {
   display: flex;
   gap: 64px;
-}
-
-#tracks {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
 }

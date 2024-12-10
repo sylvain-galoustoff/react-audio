@@ -8,7 +8,7 @@ function Home() {
   ));
 
   return (
-    <main className="content">
+    <main id={styles.home}>
       <h1>Catégories</h1>
       <div id={styles.categories}>{renderCategories}</div>
     </main>

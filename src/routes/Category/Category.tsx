@@ -4,8 +4,8 @@ import styles from "./style.module.css";
 import { categories, tracks } from "../../data/mocks";
 import { CategoryType, TrackType } from "../../@types/TrackType";
 import CategoryData from "./CategoryData/CategoryData";
-import Track from "../../components/Track/Track";
 import CategorySidebar from "../../components/CategorySidebar/CategorySidebar";
+import TrackList from "../../components/TrackList/TrackList";
 
 function Category() {
   const params = useParams();
@@ -24,22 +24,15 @@ function Category() {
     }
   }, [params.id]);
 
-  const renderTracks =
-    tracksList && tracksList.map((track) => <Track key={track.id} track={track} />);
-
   return (
-    <div className="content" id={styles.tracksPage}>
-      <main id={styles.main}>
-        <h1>{currentCat?.name}</h1>
-        {currentCat && (
-          <div id={styles.content}>
-            <CategoryData category={currentCat} tracksNumber={tracksList?.length} />
-            <div id={styles.tracks}>{renderTracks}</div>
-          </div>
-        )}
-      </main>
-      <CategorySidebar />
-    </div>
+    <main id={styles.tracksPage}>
+      <h1>{currentCat?.name}</h1>
+      <div id={styles.main}>
+        <CategoryData category={currentCat} tracksNumber={tracksList?.length} />
+        <TrackList tracks={tracksList} />
+        <CategorySidebar />
+      </div>
+    </main>
   );
 }
 

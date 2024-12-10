@@ -9,12 +9,12 @@ type CategoryCardProps = {
 function CategoryCard({ category }: CategoryCardProps) {
   return (
     <Link
-      to={`category/${category.id}`}
+      to={`/category/${category.id}`}
       className={styles.card}
       title={`Voir les titres dans la catégorie ${category.name}`}
     >
       <img
-        src={`categories/${category.thumbnail}`}
+        src={`/categories/${category.thumbnail}`}
         alt={`Illustration pour la categorie ${category.name}`}
       />
     </Link>

@@ -2,7 +2,7 @@ import { CategoryType } from "../../../@types/TrackType";
 import styles from "./style.module.css";
 
 type CategoryDataProps = {
-  category: CategoryType;
+  category?: CategoryType;
   tracksNumber: number | undefined;
 };
 
@@ -12,8 +12,8 @@ function CategoryData({ category, tracksNumber }: CategoryDataProps) {
       <div>
         <img
           id={styles.catThumbnail}
-          src={`/categories/${category.thumbnail}`}
-          alt={`Illustration pour la categorie ${category.name}`}
+          src={`/categories/${category?.thumbnail}`}
+          alt={`Illustration pour la categorie ${category?.name}`}
         />
         {tracksNumber && tracksNumber > 0 && (
           <p id={styles.tracksNumber}>{tracksNumber} titres</p>

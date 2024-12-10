@@ -1,3 +1,9 @@
+#home {
+  padding: 0 64px;
+  height: calc(100% - 120px);
+  overflow-y: auto;
+}
+
 #categories {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
