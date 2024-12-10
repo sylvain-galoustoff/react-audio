@@ -5,7 +5,7 @@ import Topbar from "../components/Topbar/Topbar";
 
 function App() {
   return (
-    <div>
+    <div id="app">
       <Topbar />
       <Routes>
         <Route path="/" element={<Home />} />

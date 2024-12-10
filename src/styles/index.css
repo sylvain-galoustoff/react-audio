@@ -2,6 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-size: 16px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,6 +16,28 @@
   --primary: #D96C06;
   --secondary: #ECC4A1;
   --separator: #4D4947;
+
+  --corner: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+html,
+body,
+#root,
+#app {
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -23,4 +46,19 @@ body {
   min-height: 100vh;
   background-color: var(--bg);
   color: var(--textAlt);
+}
+
+button {
+  background-color: var(--primary);
+  color: var(--card);
+  border: none;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--corner);
 }
