@@ -10,7 +10,7 @@ function App() {
       <Topbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/category/:slug" element={<Category />} />
+        <Route path="/category/:id" element={<Category />} />
       </Routes>
       <MediaPlayer />
     </div>
