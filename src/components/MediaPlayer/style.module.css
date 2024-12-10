@@ -6,5 +6,13 @@
   justify-content: space-between;
   background-color: var(--card);
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.50);
+}
 
+.playerPart {
+  border: 1px solid red;
+  width: 25%;
+}
+
+#controls {
+  width: 50%;
 }
