@@ -7,10 +7,20 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --bg: #F7EDE3;
+  --card: #F5EFED;
+  --text: #140A01;
+  --textAlt: #4D4947;
+  --primary: #D96C06;
+  --secondary: #ECC4A1;
+  --separator: #4D4947;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--textAlt);
 }
