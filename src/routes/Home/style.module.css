@@ -1,0 +1,6 @@
+#categories {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 64px;
+  padding-top: 32px;
+}

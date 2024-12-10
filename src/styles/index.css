@@ -32,6 +32,12 @@ h4 {
   margin: 0;
 }
 
+h1 {
+  color: var(--text);
+  font-weight: 900;
+  font-size: 2rem;
+}
+
 button {
   background-color: var(--primary);
   color: var(--card);
