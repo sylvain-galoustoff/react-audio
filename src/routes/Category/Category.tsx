@@ -1,12 +1,12 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { IoArrowBack } from "react-icons/io5";
-import { categories, tracks } from "../../data/mocks";
 import { CategoryType, TrackType } from "../../@types/TrackType";
 import CategoryData from "./CategoryData/CategoryData";
 import CategorySidebar from "../../components/CategorySidebar/CategorySidebar";
 import TrackList from "../../components/TrackList/TrackList";
 import styles from "./style.module.css";
+import { fetchCategoryById, fetchTracksFromCategoryId } from "../../controllers/api";
 
 function Category() {
   const params = useParams();
@@ -15,15 +15,33 @@ function Category() {
   const [currentCat, setCurrentCat] = useState<CategoryType>();
 
   useEffect(() => {
-    const categoryId = Number(params.id);
+    const loadTracks = async () => {
+      try {
+        const data = await fetchTracksFromCategoryId(params.id);
+        setTracksList(data);
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          console.error(err.message);
+        } else {
+          console.error("Erreur inconnue");
+        }
+      }
+    };
+    loadTracks();
 
-    const filteredTracks = tracks.filter((track) => track.categoryId === categoryId);
-    setTracksList(filteredTracks);
-
-    const category = categories.filter((category) => category.id === categoryId);
-    if (category.length > 0) {
-      setCurrentCat(category[0]);
-    }
+    const loadCategory = async () => {
+      try {
+        const data = await fetchCategoryById(params.id);
+        setCurrentCat(data);
+      } catch (error) {
+        if (error instanceof Error) {
+          console.error(error.message);
+        } else {
+          console.error("Erreur inconnue");
+        }
+      }
+    };
+    loadCategory();
   }, [params.id]);
 
   const handleBack = () => {
