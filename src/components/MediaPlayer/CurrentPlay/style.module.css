@@ -10,6 +10,10 @@
   border-radius: var(--corner);
   overflow: hidden;
   background-color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
 }
 
 #thumbnail img {

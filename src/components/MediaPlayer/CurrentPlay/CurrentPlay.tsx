@@ -1,6 +1,7 @@
 import styles from "./style.module.css";
 import commonStyles from "../style.module.css";
 import { useTrackContext } from "../../../context/TrackContext";
+import { IoDisc } from "react-icons/io5";
 
 function CurrentPlay() {
   const { track } = useTrackContext();
@@ -8,11 +9,11 @@ function CurrentPlay() {
   return (
     <div className={commonStyles.playerPart} id={styles.currentPlay}>
       <div id={styles.thumbnail}>
-        <img src={`/tracks/${track?.thumbnail}`} alt="" />
+        {track ? <img src={`/tracks/${track?.thumbnail}`} alt="" /> : <IoDisc />}
       </div>
       <div id={styles.trackData}>
         <p id={styles.label}>Lecture en cours</p>
-        <h3 id={styles.title}>{track?.title}</h3>
+        <h3 id={styles.title}>{track ? track.title : "Aucun titre en cours"}</h3>
       </div>
     </div>
   );
