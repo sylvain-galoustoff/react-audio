@@ -10,8 +10,3 @@
   height: auto;
   border-radius: var(--corner);
 }
-
-#tracksNumber {
-  font-size: 1.5rem;
-  font-weight: 900;
-}

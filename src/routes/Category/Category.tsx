@@ -55,7 +55,7 @@ function Category() {
         <h1>{currentCat?.name}</h1>
       </div>
       <div id={styles.main}>
-        <CategoryData category={currentCat} tracksNumber={tracksList?.length} />
+        <CategoryData category={currentCat} tracksCount={tracksList?.length} />
         <TrackList tracks={tracksList} />
         <CategorySidebar />
       </div>

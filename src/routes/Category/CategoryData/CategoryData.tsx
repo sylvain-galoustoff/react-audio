@@ -1,12 +1,13 @@
 import { CategoryType } from "../../../@types/TrackType";
+import TracksCount from "../../../components/TracksCount/TracksCount";
 import styles from "./style.module.css";
 
 type CategoryDataProps = {
   category?: CategoryType;
-  tracksNumber: number | undefined;
+  tracksCount: number | undefined;
 };
 
-function CategoryData({ category, tracksNumber }: CategoryDataProps) {
+function CategoryData({ category, tracksCount }: CategoryDataProps) {
   return (
     <div id={styles.categoryData}>
       <div>
@@ -15,9 +16,7 @@ function CategoryData({ category, tracksNumber }: CategoryDataProps) {
           src={`/categories/${category?.thumbnail}`}
           alt={`Illustration pour la categorie ${category?.name}`}
         />
-        {tracksNumber && tracksNumber > 0 && (
-          <p id={styles.tracksNumber}>{tracksNumber} titres</p>
-        )}
+        <TracksCount count={tracksCount} />
       </div>
     </div>
   );
